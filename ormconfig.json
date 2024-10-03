@@ -6,9 +6,9 @@
   "password": "Tuyen@123",
   "database": "nestjs_db",
   "entities": ["dist/**/*.entity.js"],
-  "migrations": ["dist/migration/*.js"],
+  "migrations": ["dist/src/migrations/*.js"],
   "cli": {
-    "migrationsDir": "src/migrations"
+    "migrationsDir": "dist/src/migrations"
   },
   "synchronize": true
 }

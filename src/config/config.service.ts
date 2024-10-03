@@ -10,7 +10,7 @@ export class ConfigsService {
       port: parseInt(process.env.DB_PORT) || 3306,
       host: process.env.DB_HOST || '127.0.0.1',
       entities: ['dist/*/entities/*.entity.js'],
-      migrations: ['dist/database/migrations/*js'],
+      migrations: ['dist/src/migrations/*.js'],
       synchronize: Boolean(process.env.DB_SYNCHRONIZE) || true,
     };
   }
