@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: my_mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: Tuyen@123
+      MYSQL_DATABASE: nestjs_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: Tuyen@123
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge

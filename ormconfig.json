@@ -1,0 +1,14 @@
+{
+  "type": "mysql",
+  "host": "127.0.0.1",
+  "port": 3306,
+  "username": "user",
+  "password": "Tuyen@123",
+  "database": "nestjs_db",
+  "entities": ["dist/**/*.entity.js"],
+  "migrations": ["dist/migration/*.js"],
+  "cli": {
+    "migrationsDir": "src/migrations"
+  },
+  "synchronize": true
+}
