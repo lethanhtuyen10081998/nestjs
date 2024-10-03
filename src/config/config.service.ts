@@ -4,11 +4,11 @@ import { Injectable } from '@nestjs/common';
 export class ConfigsService {
   get databaseConfig() {
     return {
-      username: process.env.DB_USERNAME || 'user',
-      password: process.env.DB_PASSWORD || 'Tuyen@123',
-      database: process.env.DB_NAME || 'nestjs_db',
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_NAME,
       port: parseInt(process.env.DB_PORT) || 3306,
-      host: process.env.DB_HOST || '127.0.0.1',
+      host: process.env.DB_HOST,
       entities: ['dist/*/entities/*.entity.js'],
       migrations: ['dist/src/migrations/*.js'],
       synchronize: Boolean(process.env.DB_SYNCHRONIZE) || true,
