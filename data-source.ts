@@ -1,12 +1,12 @@
 import { DataSource } from 'typeorm';
 
 export const AppDataSource = new DataSource({
-  type: process.env.DB_TYPE as any,
-  host: process.env.DB_HOST,
-  port: process.env.DB_PORT as any,
-  username: process.env.DB_USERNAME,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  type: 'mysql',
+  host: '127.0.0.1',
+  port: 3306,
+  username: 'user',
+  password: 'Tuyen@123',
+  database: 'nestjs_db',
   entities: [__dirname + '/src/**/*.entity{.ts,.js}'],
   migrations: [__dirname + '/src/migrations/*{.ts,.js}'],
   synchronize: false,
